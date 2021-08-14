@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -39,7 +40,7 @@ public class Main {
         }
     }
 
-    private static void zipFiles(String path, ArrayList<String> arrayList) {
+    private static void zipFiles(String path, List<String> arrayList) {
         try (ZipOutputStream zout = new ZipOutputStream(new FileOutputStream(path))) {
             for (String arr : arrayList) {
                 try (FileInputStream fis = new FileInputStream(arr)) {
